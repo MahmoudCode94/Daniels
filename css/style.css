@@ -131,6 +131,7 @@ width: 94%;
 #about .card .card-title{
     font-family: "Poppins", sans-serif;
     font-weight: 800;
+    color: #343434;
 }
 #about .card span{
     font-weight: 400;
@@ -191,7 +192,58 @@ width: 94%;
     color:white ;
     background-color: #1c1c1c;
 }
-
+/* -------------------- Services -------------------- */
+#services {
+    overflow-x: hidden;
+}
+.services-text h2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    color: #343434;
+    width: fit-content;
+}
+.services-text h2::after{
+    content: "";
+        width: 100%;
+        height: 30px;
+        background-image: url(../assets/imgs/dots.png);
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        z-index: -1;
+}
+#services .card{
+    padding: 50px 18px;
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+#services .card h5{
+    font-family: "Montserrat", sans-serif;
+    color: #343434;
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-size: .9rem;
+    transform: scaleY(0.95);
+}
+#services .card p{
+    color: #748182;
+    font-size: .65rem;
+    word-spacing: 1.5px;
+}
+#services .card i {
+    background: #f4f4f4;
+    color: #343434;
+    font-size: 1.3rem;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+#services .card:hover i {
+    color: white;
+    background-color: #1c1c1c;
+}
 
 
 
