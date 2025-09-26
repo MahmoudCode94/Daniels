@@ -50,3 +50,25 @@ window.addEventListener("load", () => {
     if (toRotate) new TxtType(el, JSON.parse(toRotate), period);
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const portfolioModal = document.getElementById("portfolioModal");
+  const portfolioCarousel = document.getElementById("portfolioCarousel");
+  const carousel = new bootstrap.Carousel(portfolioCarousel);
+  portfolioModal.addEventListener("show.bs.modal", function (event) {
+    const button = event.relatedTarget;
+    const index = button.getAttribute("data-index");
+    carousel.to(index);
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.querySelector("#portfolioCarousel");
+  const counter = document.querySelector("#carouselCounter");
+  const items = carousel.querySelectorAll(".carousel-item");
+  const total = items.length;
+  let activeIndex = 0;
+  counter.textContent = `${activeIndex + 1} of ${total}`;
+  carousel.addEventListener("slid.bs.carousel", function (e) {
+    activeIndex = e.to;
+    counter.textContent = `${activeIndex + 1} of ${total}`;
+  });
+});

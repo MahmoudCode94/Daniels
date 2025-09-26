@@ -16,6 +16,52 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100" tabindex="0">
+    <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0 position-relative shadow">
+                <button type="button" class="close-btn position-absolute end-0 p-0" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    &times;
+                </button>
+                <div id="portfolioCarousel" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/imgs/portfolio/1.jpg" class="d-block w-100" alt="work 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/imgs/portfolio/2.jpg" class="d-block w-100" alt="work 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/imgs/portfolio/3.jpg" class="d-block w-100" alt="work 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/imgs/portfolio/4.jpg" class="d-block w-100" alt="work 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/imgs/portfolio/5.jpg" class="d-block w-100" alt="work 5">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/imgs/portfolio/6.jpg" class="d-block w-100" alt="work 6">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev custom-prev" type="button" data-bs-target="#portfolioCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next custom-next" type="button" data-bs-target="#portfolioCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <div id="carouselCounter" class="modal-counter position-absolute end-0 p-0 pt-1 text-white">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container"> <a class="navbar-brand text-white text-uppercase" href="#">Daniels</a> <button
                 class="navbar-toggler rounded-0 border-0 text-white" type="button" data-bs-toggle="modal"
@@ -70,7 +116,7 @@
     <main>
         <section id="about" class=" py-5 bg-white">
             <div class="container card border-0 rounded-0">
-                <div class="row g-5 g-md-0 align-items-center overflow-hidden">
+                <div class="row g-md-0 align-items-center overflow-hidden gap-5">
                     <div class="col-12 col-md-5">
                         <div class="dots d-flex flex-row-reverse position-relative pe-2">
                             <img src="./assets/imgs/hero.jpg" alt="" class="position-relative">
@@ -206,8 +252,232 @@
                 </div>
             </div>
         </section>
-        <section id="works" class=""></section>
-        <section id="clients" class=""></section>
+        <section id="works" class="py-5 bg-white">
+            <div class="container services-text text-center mb-5 d-flex justify-content-center">
+                <h2 class="fs-3 position-relative">Portfolio.</h2>
+            </div>
+            <div class="container mb-5">
+                <ul class="nav nav-pills justify-content-center gap-4" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-all"
+                            type="button">All</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-work1"
+                            type="button">Brand</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-work2"
+                            type="button">Design</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-work3"
+                            type="button">Graphic</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="container tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/1.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="0" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/2.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="1" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/3.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="2" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/4.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="3" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/5.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="4" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/6.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="5" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-work1">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/4.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="3" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/6.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="5" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-work2">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/2.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="1" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/5.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="4" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-work3">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/1.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="0" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/3.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="2" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card work-card rounded-0">
+                                <img src="./assets/imgs/portfolio/5.jpg" alt="">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                    <span>WEB DESIGN</span>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                            data-index="4" class="btn btn-outline-dark"><i
+                                                class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="clients" class="" style="height: 100vh;"></section>
         <section id="team" class=""></section>
         <section id="contact" class=""></section>
     </main>

@@ -244,6 +244,128 @@ width: 94%;
     color: white;
     background-color: #1c1c1c;
 }
+/* -------------------- work -------------------- */
+#works .nav-pills{
+    --bs-nav-pills-border-radius: none;
+    --bs-nav-pills-link-active-bg: none;
+}
+.nav-pills .nav-link {
+    position: relative;
+    padding: 0;
+    font-weight: 700;
+    font-size: 16px;
+    color: #222;
+    transition: color .5s ease;
+}
+.nav-pills .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background-color: #222;
+    transition: width 0.3s ease;
+}
+.nav-pills .nav-link.active::after {
+    width: 100%;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link{
+    color:#343434;
+    background-color:none;
+}
+.work-card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+.work-card img {
+    display: block;
+    width: 100%;
+    transition: transform .3s ease;
+}
+.work-card .overlay {
+    position: absolute;
+    inset: 6px;
+    background: rgba(255, 255, 255, 0.866);
+    opacity: 0;
+    transform: translatey(15px);
+    transition: all .5s ease;
+}
+.work-card .overlay{
+    font-size: .6rem;
+}
+.work-card .overlay span{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: .55rem;
+    letter-spacing: 1.5px;
+    color: #343434;
+}
+.work-card .overlay a{
+    font-size: .6rem;
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    color: #fff;
+    background-color: #1c1c1c;
+}
+.work-card .overlay a:hover{
+    color: #1c1c1c;
+    background-color: #fff;
+}
+.work-card:hover .overlay {
+    transform: translatey(0);
+    opacity: 1;
+}
+.tab-pane .card {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.tab-pane.active.show .card {
+    transform: scale(1);
+    opacity: 1;
+}
+.portfolio-modal{
+    background-color: #00000080;
+}
+.portfolio-modal .modal-dialog{
+    --bs-modal-width: 600px;
+}
+.custom-prev,
+.custom-next {
+    width: auto;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    position: fixed;
+}
+.custom-prev {
+    left: 15px;
+}
+.custom-next {
+    right: 15px;
+}
+.modal-counter{
+    font-size: .6rem;
+}
+.close-btn {
+    top: -30px;
+    font-size: 1.5rem;
+    color: #ccc;    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1;
+}
+
 
 
 
@@ -254,16 +376,24 @@ width: 94%;
 
 @media (min-width: 576px) {
     .container {
-        max-width: 560px;
+        width: 560px;
     }
 }
 @media (min-width: 768px) {
     .container {
-        max-width: 740px;
+            width: 750px;
+    }
+    #about .container .row {
+        gap: 0rem !important;
     }
 }
 @media (min-width: 992px) {
     .container {
-        max-width: 1180px;
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
     }
 }
