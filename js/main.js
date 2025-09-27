@@ -4,12 +4,6 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 50) navbar.classList.add("scrolled");
   else navbar.classList.remove("scrolled");
 });
-// ================= Navbar Scroll Effect =================
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector("nav");
-  if (window.scrollY > 50) navbar.classList.add("scrolled");
-  else navbar.classList.remove("scrolled");
-});
 // ================= Typewriter Effect =================
 class TxtType {
   constructor(el, toRotate, period) {
@@ -147,8 +141,13 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
     {
-      threshold: 0.3, 
+      threshold: 0.3,
     }
   );
   bars.forEach((bar) => io.observe(bar));
+});
+window.addEventListener("scroll", function () {
+  let scrollPosition = window.scrollY;
+  document.querySelector(".parallax").style.backgroundPositionY =
+    -(scrollPosition * 0.75) + "px";
 });
