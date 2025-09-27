@@ -117,7 +117,7 @@
         </div>
     </header>
     <!-- ======================main=============================== -->
-    <main>
+    <main class="">
         <!-- ======================about=============================== -->
         <section id="about" class=" py-5 bg-white">
             <div class="container card border-0 rounded-0">
@@ -138,29 +138,28 @@
                                 has survived not only five centuries, but also the leap into electronic but also the
                                 leap into electronic typesetting, remaining essentially unchanged. It was popularised in
                                 the 1960s with the release of Letraset sheets containing</p>
-                            <div class="bars d-flex flex-column gap-4">
-                                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0"
-                                    aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 95%">
-                                        <p>Web Design</p>
-                                        <span>95%</span>
-                                    </div>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 80%">
-                                        <p>Branding</p>
-                                        <span>80%</span>
-                                    </div>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50"
-                                    aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 90%">
-                                        <p>Development</p>
-                                        <span>90%</span>
-                                    </div>
-                                </div>
-                            </div>
+<div class="bars d-flex flex-column gap-4">
+    <div class="progress" role="progressbar" aria-label="Web Design">
+        <div class="progress-bar" data-percent="95">
+            <p>Web Design</p>
+            <span>95%</span>
+        </div>
+    </div>
+
+    <div class="progress" role="progressbar" aria-label="Branding">
+        <div class="progress-bar" data-percent="80">
+            <p>Branding</p>
+            <span>80%</span>
+        </div>
+    </div>
+
+    <div class="progress" role="progressbar" aria-label="Development">
+        <div class="progress-bar" data-percent="90">
+            <p>Development</p>
+            <span>90%</span>
+        </div>
+    </div>
+</div>
                             <div class="btns my-4">
                                 <a href="#" class="text-decoration-none btn-1">Download C.V</a>
                                 <a href="#" class="text-decoration-none btn-2">Contact Me</a>
@@ -485,10 +484,11 @@
             </div>
         </section>
         <section id="clients" class="pt-5">
+            <div class="container services-text text-center mb-5 d-flex justify-content-center">
+                <h2 class="fs-3 position-relative">Testimonials.</h2>
+            </div>
             <div class="container">
-                <div class="container services-text text-center mb-5 d-flex justify-content-center">
-                    <h2 class="fs-3 position-relative">Testimonials.</h2>
-                </div>
+
                 <div id="carouselExampleAutoplaying" class="carousel slide d-flex flex-column align-items-center gap-3"
                     data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -497,8 +497,7 @@
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, velit cumque at laboriosam
                                 iure
                                 reprehenderit, maiores iste eligendi ratione assumenda labore mollitia esse sint
-                                praesentium
-                                corporis quasi veniam. Hic, quae?</p>
+                                praesentium veniam. Hic, quae?</p>
                             <h5>Alex Smith</h5>
                             <span>Evanto Customer</span>
                         </div>
@@ -507,8 +506,7 @@
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, velit cumque at laboriosam
                                 iure
                                 reprehenderit, maiores iste eligendi ratione assumenda labore mollitia esse sint
-                                praesentium
-                                corporis quasi veniam. Hic, quae?</p>
+                                praesentium veniam. Hic, quae?</p>
                             <h5>Alex Smith</h5>
                             <span>Evanto Customer</span>
                         </div>
@@ -517,8 +515,7 @@
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, velit cumque at laboriosam
                                 iure
                                 reprehenderit, maiores iste eligendi ratione assumenda labore mollitia esse sint
-                                praesentium
-                                corporis quasi veniam. Hic, quae?</p>
+                                praesentium veniam. Hic, quae?</p>
                             <h5>Alex Smith</h5>
                             <span>Evanto Customer</span>
                         </div>
@@ -568,7 +565,74 @@
                 </div>
             </div>
         </section>
-        <section id="team" class=""></section>
+        <section id="team" class="">
+            <div class="container services-text text-center mb-5 d-flex justify-content-center">
+                <h2 class="fs-3 position-relative">Our Team.</h2>
+            </div>
+<div class="cards container">
+    <div class="row">
+        <div class="card col-12 col-md-6 col-lg-4 mb-4 text-center border-0 bg-transparent">
+            <div class="img-zone overflow-hidden position-relative">
+                <img class="w-100" src="./assets/imgs/1.jpg" alt="">
+                <div class="layer position-absolute d-flex justify-content-center align-items-center">
+                    <a href="#" class="text-decoration-none"><i
+                            class="fa-brands fa-facebook-f rounded-circle bg-black text-white d-flex justify-content-center align-items-center"></i></a>
+                    <a href="#" class="text-decoration-none"><i
+                            class="fa-brands fa-twitter rounded-circle bg-black text-white d-flex justify-content-center align-items-center"></i></a>
+                    <a href="#" class="text-decoration-none"><i
+                            class="fa-brands fa-pinterest-p rounded-circle bg-black text-white d-flex justify-content-center align-items-center"></i></a>
+                    <a href="#" class="text-decoration-none"><i
+                            class="fa-brands fa-linkedin-in rounded-circle bg-black text-white d-flex justify-content-center align-items-center"></i></a>
+                </div>
+            </div>
+            <div class="card-body text-light p-3 rounded-bottom">
+                <h4 class="card-title fs-5 m-0">John Doe</h4>
+                <p class="card-text fw-bolder text-uppercase">Front-End Developer</p>
+            </div>
+        </div>
+
+        <div class="card col-12 col-md-6 col-lg-4 mb-4 text-center border-0 bg-transparent">
+            <div class="img-zone overflow-hidden position-relative">
+                <img class="w-100" src="./assets/imgs/1.jpg" alt="">
+                <div class="layer position-absolute d-flex justify-content-center align-items-center">
+                    <a href="#" class="text-decoration-none"><i
+                            class="fa-brands fa-facebook-f rounded-circle bg-black text-white d-flex justify-content-center align-items-center"></i></a>
+                    <a href="#" class="text-decoration-none"><i
+                            class="fa-brands fa-twitter rounded-circle bg-black text-white d-flex justify-content-center align-items-center"></i></a>
+                    <a href="#" class="text-decoration-none"><i
+                            class="fa-brands fa-pinterest-p rounded-circle bg-black text-white d-flex justify-content-center align-items-center"></i></a>
+                    <a href="#" class="text-decoration-none"><i
+                            class="fa-brands fa-linkedin-in rounded-circle bg-black text-white d-flex justify-content-center align-items-center"></i></a>
+                </div>
+            </div>
+            <div class="card-body text-light p-3 rounded-bottom">
+                <h4 class="card-title fs-5 m-0">John Doe</h4>
+                <p class="card-text fw-bolder text-uppercase">Front-End Developer</p>
+            </div>
+        </div>
+
+        <div class="card col-12 col-md-6 col-lg-4 mb-4 text-center border-0 bg-transparent">
+            <div class="img-zone overflow-hidden position-relative">
+                <img class="w-100" src="./assets/imgs/1.jpg" alt="">
+                <div class="layer position-absolute d-flex justify-content-center align-items-center">
+                    <a href="#" class="text-decoration-none"><i
+                            class="fa-brands fa-facebook-f rounded-circle bg-black text-white d-flex justify-content-center align-items-center"></i></a>
+                    <a href="#" class="text-decoration-none"><i
+                            class="fa-brands fa-twitter rounded-circle bg-black text-white d-flex justify-content-center align-items-center"></i></a>
+                    <a href="#" class="text-decoration-none"><i
+                            class="fa-brands fa-pinterest-p rounded-circle bg-black text-white d-flex justify-content-center align-items-center"></i></a>
+                    <a href="#" class="text-decoration-none"><i
+                            class="fa-brands fa-linkedin-in rounded-circle bg-black text-white d-flex justify-content-center align-items-center"></i></a>
+                </div>
+            </div>
+            <div class="card-body text-light p-3 rounded-bottom">
+                <h4 class="card-title fs-5 m-0">John Doe</h4>
+                <p class="card-text fw-bolder text-uppercase">Front-End Developer</p>
+            </div>
+        </div>
+    </div>
+</div>
+        </section>
         <section id="contact" class=""></section>
     </main>
     <footer></footer>

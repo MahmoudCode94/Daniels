@@ -110,3 +110,45 @@ counters.forEach((counter) => {
 
   observer.observe(counter);
 });
+var bars = document.querySelectorAll(".meter > span");
+console.clear();
+
+setInterval(function () {
+  bars.forEach(function (bar) {
+    var getWidth = parseFloat(bar.dataset.progress);
+
+    for (var i = 0; i < getWidth; i++) {
+      bar.style.width = i + "%";
+    }
+  });
+}, 500);
+document.addEventListener("DOMContentLoaded", function () {
+  const bars = document.querySelectorAll(".progress-bar");
+  bars.forEach((bar) => {
+    if (!bar.dataset.percent) {
+      const span = bar.querySelector("span");
+      if (span) {
+        const match = span.textContent.match(/(\d+)%?/);
+        if (match) bar.dataset.percent = match[1];
+      }
+    }
+    bar.style.width = "0%";
+  });
+  const io = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          const pct = parseInt(bar.dataset.percent || 0, 10);
+          const final = Math.max(0, Math.min(100, pct));
+          bar.style.width = final + "%";
+          observer.unobserve(bar);
+        }
+      });
+    },
+    {
+      threshold: 0.3, 
+    }
+  );
+  bars.forEach((bar) => io.observe(bar));
+});
