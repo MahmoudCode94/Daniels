@@ -501,14 +501,49 @@ transition: all .7s ;
     background-color: white !important;
     color: #000 !important;
 }
-
-
-
-
-
-
-
-
+/* ============================contact=============================== */
+#contact .info i{
+    font-size: 25px;
+    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: rgb(244, 244, 244);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+#contact .info-card:hover i{
+    color: rgb(238, 238, 238);
+    background: rgb(28, 28, 28);
+}
+#contact .info h6{
+    font-family: "Montserrat", sans-serif;
+    font-size: .8rem;
+    font-weight: 700;
+}
+#contact .info p{
+    line-height: 1.6;
+    font-size: 15px;
+    color: rgb(116, 129, 130);
+    margin: 0px;
+}
+form input,
+form textarea{
+    padding: 10px !important;
+    background: #f4f4f4 !important;
+    font-size: .6rem !important;
+}
+form .btn{
+    font-size: .6rem !important;
+    padding: 10px 40px !important;
+    background: #1c1c1c !important;
+    color: #eee !important;
+}
+footer{
+    background-color: #222;
+    color: #748182;
+    font-size: .6rem; 
+}
 
 
 
