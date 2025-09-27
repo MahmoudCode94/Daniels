@@ -393,7 +393,7 @@ width: 94%;
 }
 /* ============================clients=============================== */
 .carousel-indicators {
-    position: static;
+    position: relative;
     margin-top: 15px;
     display: flex;
     justify-content: center;
