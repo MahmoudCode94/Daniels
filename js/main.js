@@ -82,3 +82,31 @@ navLinks.forEach((link) => {
     bsCollapse.hide();
   });
 });
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach((counter) => {
+  const updateCount = () => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
+    const increment = target / 250;
+
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      requestAnimationFrame(updateCount);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        updateCount();
+        observer.unobserve(counter);
+      }
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(counter);
+});
