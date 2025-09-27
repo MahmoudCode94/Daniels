@@ -1,5 +1,5 @@
 html {
-    scroll-padding-top: 70px;
+    scroll-padding-top: 60px;
 }
 body{
     font-family: "Poppins", sans-serif !important;
@@ -57,9 +57,35 @@ nav.scrolled {
     padding: .45rem 0 !important;
 }
 nav.scrolled .nav-link,
-nav.scrolled .navbar-brand {
+nav.scrolled .navbar-brand,
+nav.scrolled .navbar-toggler i{
     color: #1c1c1c !important;
-    transition: all .5s;
+    transition: all .3s;
+}
+/* nav toggle */
+.navbar-collapse.show,
+.navbar-collapse.collapsing {
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    padding: 1rem 0;
+    z-index: 999;
+}
+.navbar-collapse.show .navbar-nav,
+.navbar-collapse.collapsing .navbar-nav {
+    gap: 0.3rem;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar-collapse.show .nav-link,
+.navbar-collapse.collapsing .nav-link {
+    color: #1c1c1c !important;
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding: 8px 0;
+    text-align: center;
 }
 /* ============================header=============================== */
 header {
@@ -85,7 +111,7 @@ header:after {
     font-weight: 800;
 }
 div:has(.typewrite){
-    font-size: 3rem;
+    font-size: 1.5rem;
     transform: scaleY(0.9);
 }
 .typewrite{
@@ -378,6 +404,9 @@ width: 94%;
     .container {
         width: 560px;
     }
+    div:has(.typewrite) {
+        font-size: 2rem;
+    }
 }
 @media (min-width: 768px) {
     .container {
@@ -386,6 +415,9 @@ width: 94%;
     #about .container .row {
         gap: 0rem !important;
     }
+                div:has(.typewrite) {
+                    font-size: 3rem;
+                }
 }
 @media (min-width: 992px) {
     .container {
